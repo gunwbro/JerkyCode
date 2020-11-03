@@ -1,0 +1,108 @@
+body {
+    user-select: none;
+}
+.header {
+    background-color: #c8bfe7;
+    text-align: center;
+    height: 300px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    height: 850px;
+    text-align: center;
+}
+.footer {
+    background-color: #c8bfe7;
+    height: 200px;
+    text-align: center;
+}
+
+.title {
+    padding: 100px 0;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.menu {
+    color: white;
+}
+.menuElem {
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menuName {
+    padding: 70px 0;
+    color: #2f225b;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.made, .email{
+    color: white;
+    font-weight: bold;
+}
+
+.made {
+    padding-top: 40px;
+}
+.email {
+    padding-top: 20px;
+}
+
+.homeBtn {
+    color: white;
+}
+
+.searchBar {
+    position: absolute;
+    left: 55%;
+    width: 270px;
+    height: 26px;
+    border: none;
+}
+
+.none {
+    display: none;
+}
+.searchText {
+    margin-left: 3px;
+    margin-top: 3px;
+    height: 15px;
+    float: left;
+}
+
+.searchBtn {
+    background-color: #c8bfe7;
+    color: white;
+    border: 1px solid #c8bfe7;
+    height: 21px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.write {
+    display: none;
+    margin-top: 10px;
+    float: right;
+    background-color: #c8bfe7;
+    border: 1px solid #2f225b;
+    color: white;
+}
+
+.techPost, .projectPost {
+    height: 550px;
+    border: 1px solid gray;
+}
+
+.inform {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+}

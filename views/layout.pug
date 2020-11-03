@@ -1,0 +1,35 @@
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        title= title
+        meta(name='viewport' content='width=device-width, user-scalable=no')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        link(rel='stylesheet' href='/index.css')
+    body
+        .wrap
+            .header
+                .title
+                    a(href="/") Portfolio
+                .menu
+                    span.menuElem
+                        a.homeBtn(href="/") Home
+                    span.menuElem
+                        a.profile(href="/profile") Profile
+                    span.menuElem
+                        a.project(href="/project") Project
+                    span.menuElem
+                        a.tech(href="/tech") Tech
+                    span.menuElem
+                        a.tag(href="/tag") Tag
+                    span.menuElem.search Search
+            .container
+                .searchBar.none
+                    input.searchText(type="text", name="search", size="24")
+                    input.searchBtn(type="button", value="Search")
+                .menuName= menuName
+                block content
+            .footer
+                .made Copyright 2020. gunwoo All rights reserved.
+                .email gunwbro@gmail.com
+        script(src="/index.js")
