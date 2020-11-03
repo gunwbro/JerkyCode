@@ -24,7 +24,7 @@ router.get("/project", (req, res, next) => {
 });
 
 router.get("/tech", (req, res, next) => {
-  res.render("tect", {
+  res.render("tech", {
     title: "Jerkyb",
     menuName: "Tech",
   });
