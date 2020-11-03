@@ -2,34 +2,35 @@ body {
     user-select: none;
 }
 .header {
-    background-color: #c8bfe7;
+    background-color: #F2F2F2;
     text-align: center;
     height: 300px;
 }
 a {
     text-decoration: none;
-    color: white;
+    color: #303030;
 }
 .container {
     height: 850px;
     text-align: center;
+    background-color: #F2F2F2;
 }
 .footer {
-    background-color: #c8bfe7;
+    background-color: #F2F2F2;
     height: 200px;
     text-align: center;
 }
 
 .title {
     padding: 100px 0;
-    color: white;
+    color: #303030;
     font-size: 40px;
     font-weight: bold;
 
 }
 
 .menu {
-    color: white;
+    color: #303030;
 }
 .menuElem {
     margin-right: 40px;
@@ -39,13 +40,13 @@ a {
 }
 .menuName {
     padding: 70px 0;
-    color: #2f225b;
+    color: #303030;
     font-size: 40px;
     font-weight: bold;
 }
 
 .made, .email{
-    color: white;
+    color: #303030;
     font-weight: bold;
 }
 
@@ -57,7 +58,7 @@ a {
 }
 
 .homeBtn {
-    color: white;
+    color: #303030;
 }
 
 .searchBar {
@@ -79,9 +80,9 @@ a {
 }
 
 .searchBtn {
-    background-color: #c8bfe7;
+    background-color:#303030;
     color: white;
-    border: 1px solid #c8bfe7;
+    border: 1px solid#303030;
     height: 21px;
     margin-top: 3px;
     font-weight: bold;
