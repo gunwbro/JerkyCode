@@ -16,13 +16,6 @@ router.get("/profile", (req, res, next) => {
   });
 });
 
-router.get("/project", (req, res, next) => {
-  res.render("project", {
-    title: "Jerky Code",
-    menuName: "Project",
-  });
-});
-
 router.get("/tech", (req, res, next) => {
   res.render("tech", {
     title: "Jerky Code",

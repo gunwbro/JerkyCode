@@ -1,6 +1,13 @@
 extends layout
 
 block content
-    .projectPost
-    input(type="button", value="Post" class="write")
-    
+    .projectsPost
+        for project in projects
+            .projects-container
+                .projects-img
+                    img(src=project.img alt='섬네일')
+                a.projects-title(href='/project/' + project.id)= project.title
+    div
+        a.writeProject(href='/project/post') Post
+
+    script.

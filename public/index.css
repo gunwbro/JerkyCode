@@ -89,19 +89,21 @@ a {
     font-weight: bold;
 }
 
-.write {
+.writeProject {
     width: 100px;
     height: 30px;
     margin-top: 10px;
     float: right;
     background-color: #303030;
     color: white;
+    line-height: 30px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.techPost, .projectPost {
-    height: 700px;
+.techPosts, .projectsPost {
+    min-height: 700px;
     border: 1px solid gray;
 }
 
@@ -110,3 +112,4 @@ a {
     font-weight: bold;
     line-height: 40px;
 }
+

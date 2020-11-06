@@ -7,6 +7,7 @@ const flash = require('connect-flash');
 require('dotenv').config();
 
 const pageRouter = require('./routes/page');
+const projectRouter = require('./routes/project');
 const { sequelize } = require('./models');
 
 const app = express();
@@ -32,7 +33,9 @@ app.use(session({
 }));
 app.use(flash());
 
+// 라우팅
 app.use('/', pageRouter);
+app.use('/project', projectRouter);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');

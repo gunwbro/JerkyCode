@@ -6,14 +6,11 @@ const search = document.querySelector(".search");
 const menuName = document.querySelector(".menuName");
 const searchBar = document.querySelector(".searchBar");
 const searchBtn = document.querySelector(".searchBtn");
-const admin = document.querySelector(".admin");
 const write = document.querySelector(".write");
 let password;
 let status = false;
 
 search.addEventListener("click", SearchHandler);
-admin.addEventListener("click", adminHandler);
-
 
 function SearchHandler() {
     if (searchBar.classList.contains("none")) {

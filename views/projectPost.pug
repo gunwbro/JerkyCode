@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .projectPost
+    .project-container
+      .project-img
+        img(src=project.img alt='섬네일')
+      .project-content 
+        #project.project-title= 'Project: ' + project.title
+        #project.project-date=  'Date: ' + project.date
+        #project.project-skills= 'Skills: ' + project.skills
+        #project.project-part= 'Take Part: ' + project.part
+        #project.project-description= 'Description: ' + project.description
+
+    script.
