@@ -28,7 +28,8 @@ html
                 .searchBar.none
                     input.searchText(type="text", name="search", size="24")
                     input.searchBtn(type="button", value="Search")
-                .menuName= menuName
+                if (menuName)
+                    .menuName= menuName
                 block content
             .footer
                 .made Copyright 2020. gunwoo All rights reserved.

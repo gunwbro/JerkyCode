@@ -24,6 +24,9 @@
 .projects-container {
   text-align: center;
 }
+.project-container {
+  margin-top: 50px;
+}
 .project-content {
   width: 500px;
   height: 500px;
