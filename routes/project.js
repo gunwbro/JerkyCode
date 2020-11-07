@@ -18,6 +18,13 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/post", (req, res, next) => {
+  res.render("newProject", {
+    title: "Jerky Code",
+    menuName: "New Project",
+  });
+});
+
 router.get("/:id", async (req, res, next) => {
   try {
     const project = await Project.findOne({ where: { id: req.params.id } });
@@ -30,5 +37,7 @@ router.get("/:id", async (req, res, next) => {
     next(error);
   }
 })
+
+
 
 module.exports = router;

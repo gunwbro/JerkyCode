@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  form#newPost(action='/project/post' method="post" enctype="multipart/form-data")
+    .newProject-container
+      #project-elem.newProject-name Project: 
+        input#text(type="text", name="title")
+      #project-elem.newProject-date Date:
+        input#text(type="text", name="date")
+      #project-elem.newProject-skill Skills: 
+        input#text(type="text", name="skill")
+      #project-elem.newProject-part Take Part: 
+        input#text(type="text", name="part")
+      #project-elem.newProject-description Description:
+        textarea#text.input_description(name="description", cols="30", rows="10")
+      div
+        label#img-label(for='img') Photo:
+        input#img(type='file' accept='image/*')
+      div#new-btn
+        button.btn(type='submit') Submit
+  script.
