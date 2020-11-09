@@ -7,8 +7,6 @@ const menuName = document.querySelector(".menuName");
 const searchBar = document.querySelector(".searchBar");
 const searchBtn = document.querySelector(".searchBtn");
 const write = document.querySelector(".write");
-let password;
-let status = false;
 
 search.addEventListener("click", SearchHandler);
 
@@ -20,19 +18,4 @@ function SearchHandler() {
     }
 }
 
-function adminHandler() {
-    password = prompt("패스워드를 입력하세요");
-
-    // 데이터베이스에서 패스워드 불러와줌.
-    if (password === "whrjsdn") {
-        status = true;
-    } else {
-        alert("비밀번호 오류");
-    }
-    if (status) {
-        write.style.display = "block";
-    }
-    else {
-        write.style.display = "none";
-    }
-}
+mouseOver

@@ -11,6 +11,13 @@ a {
     text-decoration: none;
     color: #303030;
 }
+
+.login {
+    float: right;
+    cursor: pointer;
+}
+
+
 .container {
     min-height: 850px;
     text-align: center;
@@ -39,6 +46,7 @@ a {
     font-weight: bold;
     cursor: pointer;
 }
+
 .menuName {
     padding: 70px 0;
     color: #303030;
@@ -60,6 +68,9 @@ a {
 
 .homeBtn {
     color: #303030;
+}
+.homeBtn:hover {
+    color: #7579e7;
 }
 
 .searchBar {
@@ -103,7 +114,6 @@ a {
 
 .techPosts, .projectsPost {
     min-height: 700px;
-    border: 1px solid gray;
 }
 
 .inform {
