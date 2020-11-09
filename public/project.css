@@ -18,6 +18,19 @@
   border: 1px solid gray;
 }
 .projects-title {
+  font-weight: bold;
+}
+.projectImg {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+.postImg {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+.projects-title {
   line-height: 50px;
 }
 
@@ -41,6 +54,7 @@
   margin-left: auto;
   margin-right: auto;
   border: 1px solid gray;
+  object-fit: cover;
   
 }
 #project {
