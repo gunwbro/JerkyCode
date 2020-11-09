@@ -1,9 +1,9 @@
 body {
     user-select: none;
-    background-color: #F2F2F2;
+    background-color: white;
 }
 .header {
-    background-color: #F2F2F2;
+    background-color: white;
     text-align: center;
     height: 300px;
 }
@@ -14,10 +14,10 @@ a {
 .container {
     min-height: 850px;
     text-align: center;
-    background-color: #F2F2F2;
+    background-color: white;
 }
 .footer {
-    background-color: #F2F2F2;
+    background-color: white;
     height: 100px;
     text-align: center;
 }
