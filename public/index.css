@@ -66,11 +66,14 @@ a {
     padding-top: 20px;
 }
 
-.homeBtn {
+.homeBtn, .profile, .project, .tech, .tag, .search {
     color: #303030;
+    -webkit-transition: color 0.1s;
+    transition: color 0.1s;
 }
-.homeBtn:hover {
-    color: #7579e7;
+.homeBtn:hover, .profile:hover, .project:hover, .tech:hover, 
+.tag:hover, .search:hover {
+    color: #cd0a0a;
 }
 
 .searchBar {

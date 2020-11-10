@@ -1,7 +1,13 @@
 .projectsPost {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  left: 50% 0;
+}
 
+.projectsPost-container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects-container {
