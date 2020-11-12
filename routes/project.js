@@ -2,6 +2,7 @@ const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
+const { isLoggedIn, isNotLoggedIn } = require("./middlewares"); 
 
 const { Project } = require("../models");
 
@@ -34,6 +35,7 @@ router.get("/", async (req, res, next) => {
       title: "Jerky Code",
       menuName: "Project",
       projects: projects,
+      admin: req.user,
     });
     
   } catch (error) {
@@ -42,14 +44,13 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/post", (req, res, next) => {
+router.get("/post", isLoggedIn, (req, res, next) => {
   res.render("newProject", {
     title: "Jerky Code",
     menuName: "New Project",
+    admin: req.user,
   });
 });
-
-
 
 router.post("/post", upload.single('img'), async (req, res, next) => {
   try {
@@ -95,6 +96,7 @@ router.get("/:id", async (req, res, next) => {
     res.render("projectPost", {
       title: "Jerky Code",
       project,
+      admin: req.user,
     })
   } catch (error) {
     console.error(error);

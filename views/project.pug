@@ -9,6 +9,7 @@ block content
                     img.projectImg(src=project.img alt='섬네일')
                 a.projects-title(href='/project/' + project.id)= project.title
     div
-        a.writeProject(href='/project/post') Post
+        if (admin)
+            a.writeProject(href='/project/post') Post
 
     script.

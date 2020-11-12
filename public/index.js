@@ -17,5 +17,3 @@ function SearchHandler() {
         searchBar.classList.add("none");
     }
 }
-
-mouseOver

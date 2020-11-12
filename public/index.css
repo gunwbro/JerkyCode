@@ -12,7 +12,7 @@ a {
     color: #303030;
 }
 
-.login {
+.login, .logout {
     float: right;
     cursor: pointer;
 }

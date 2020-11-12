@@ -2,5 +2,6 @@ extends layout
 
 block content
     .techPosts
-    input(type="button", value="Post" class="writeProject")
+    if (admin)
+        input(type="button", value="Post" class="writeProject")
     

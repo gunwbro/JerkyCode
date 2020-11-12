@@ -1,0 +1,23 @@
+doctype
+html
+  head
+    meta(charset='UTF-8')
+    title= title
+    meta(name='viewport' content='width=device-width, user-scalable=no')
+    meta(http-equiv='X-UA-Compatible', content='IE-edge')
+    link(rel='stylesheet' href='/login.css')
+  body
+    .big-container
+      .login-container
+        .login-title LOGIN
+        form.login-form(action='/auth/login', method='post')
+          .input-group
+            label(for='name') ID  : 
+            input#name(type='name' name='name' required autofocus)
+          .input-group  
+            label(for='password') PW :
+            input#password(type='password' name='password' required)
+          if loginError
+            .error-message= loginError
+          button#login(type='submit') Login
+

@@ -4,14 +4,18 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
+const passport = require("passport");
 require('dotenv').config();
 
 const pageRouter = require('./routes/page');
+const authRouter = require("./routes/auth");
 const projectRouter = require('./routes/project');
 const { sequelize } = require('./models');
+const passportConfig = require("./passport");
 
 const app = express();
 sequelize.sync();
+passportConfig(passport);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -32,11 +36,15 @@ app.use(session({
         secure: false,
     }
 }));
+
 app.use(flash());
+app.use(passport.initialize()); // req 객체에 passport 설정을 심음
+app.use(passport.session());    // req.session 객체에 passport 정보를 저장함
 
 // 라우팅
 app.use('/', pageRouter);
 app.use('/project', projectRouter);
+app.use("/auth", authRouter);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');

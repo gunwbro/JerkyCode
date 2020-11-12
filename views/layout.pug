@@ -9,8 +9,11 @@ html
         link(rel='stylesheet' href='/project.css')
     body
         .wrap
-            .header
-                .login Login
+            .header 
+                if (admin)
+                    a.logout(href="/auth/logout") Logout
+                else
+                    a.login(href="/auth/login") Login
                 .title
                     a(href="/") Portfolio
                 .menu
