@@ -5,8 +5,9 @@ block content
     .projectsPost
         for project in projects
             .projects-container
-                .projects-img
-                    img.projectImg(src=project.img alt='섬네일')
+                a(href='/project/' + project.id)
+                    .projects-img
+                        img.projectImg(src=project.img alt='섬네일')
                 a.projects-title(href='/project/' + project.id)= project.title
     div
         if (admin)
