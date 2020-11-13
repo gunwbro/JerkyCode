@@ -6,6 +6,7 @@ body {
     background-color: white;
     text-align: center;
     height: 300px;
+    border-bottom: 1px solid #EEEEEE;
 }
 a {
     text-decoration: none;
@@ -25,7 +26,8 @@ a {
 }
 .footer {
     background-color: white;
-    height: 100px;
+    border-top: 1px solid #EEEEEE;
+    height: 150px;
     text-align: center;
 }
 
