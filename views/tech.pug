@@ -1,7 +1,12 @@
 extends layout
 
 block content
-    .techPosts
-    if (admin)
-        input(type="button", value="Post" class="writeProject")
-    
+    .techsPost-container
+        .techsPost
+            for tech in techs
+                .techs-container
+                    a.techs-title(href='/tech/' + tech.id)= tech.title
+        div
+            if (admin)
+                a.writeProject(href='/tech/post') Post
+        

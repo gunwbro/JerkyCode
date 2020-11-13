@@ -10,6 +10,7 @@ require('dotenv').config();
 const pageRouter = require('./routes/page');
 const authRouter = require("./routes/auth");
 const projectRouter = require('./routes/project');
+const techRouter = require("./routes/tech");
 const { sequelize } = require('./models');
 const passportConfig = require("./passport");
 
@@ -24,6 +25,7 @@ app.set('port', process.env.PORT || 80);
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/img', express.static(path.join(__dirname, 'uploads')));
+app.use('/editor', express.static(path.join(__dirname, 'ckeditor')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
@@ -45,6 +47,7 @@ app.use(passport.session());    // req.session 객체에 passport 정보를 저�
 app.use('/', pageRouter);
 app.use('/project', projectRouter);
 app.use("/auth", authRouter);
+app.use("/tech", techRouter);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');

@@ -115,7 +115,7 @@ a {
     cursor: pointer;
 }
 
-.techPosts, .projectsPost {
+.techsPost, .projectsPost {
     min-height: 700px;
 }
 

@@ -1,0 +1,30 @@
+.techsPost-container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.techsPost {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.techs-container {
+  font-size: 20px;
+}
+.newTech-title {
+  width: 750px;
+  height: 30px;
+  border-style: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 20px;
+  line-height: 20px;
+}
+#cke_editor1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

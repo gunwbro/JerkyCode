@@ -18,14 +18,6 @@ router.get("/profile", (req, res, next) => {
   });
 });
 
-router.get("/tech", (req, res, next) => {
-  res.render("tech", {
-    title: "Jerky Code",
-    menuName: "Tech",
-    admin: req.user,
-  });
-});
-
 router.get("/tag", (req, res, next) => {
   res.render("tag", {
     title: "Jerky Code",
