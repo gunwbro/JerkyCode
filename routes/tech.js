@@ -27,7 +27,7 @@ router.get("/", async (req, res, next) => {
     const techs = await Tech.findAll();
     res.render("tech", {
       title: "Jerky Code",
-      menuName: "Tech",
+      menuName: "Post",
       admin: req.user,
       techs 
     });
