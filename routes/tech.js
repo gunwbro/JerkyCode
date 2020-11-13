@@ -79,6 +79,7 @@ router.get("/:id", async (req, res, next) => {
     const tech = await Tech.findOne({ where: { id: req.params.id } });
     res.render("techPost", {
       title: "Jerky Code",
+      menuName: tech.title,
       tech,
       admin: req.user,
     });
