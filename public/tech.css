@@ -22,6 +22,12 @@
   font-size: 20px;
   line-height: 20px;
 }
+.techPost {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
 #cke_editor1 {
   margin-left: auto;
   margin-right: auto;
