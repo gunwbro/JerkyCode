@@ -12,7 +12,13 @@ a {
     text-decoration: none;
     color: #303030;
 }
+.Hello {
+    padding-top: 50px;
+}
 
+.homeImg {
+    box-shadow: 1px 4px 20px rgba(0,0,0,0.2);
+}
 .login, .logout {
     float: right;
     cursor: pointer;
@@ -85,7 +91,8 @@ a {
     height: 26px;
     border: none;
 }
-
+.git {
+}
 .none {
     display: none;
 }
@@ -125,5 +132,9 @@ a {
     font-size: 20px;
     font-weight: bold;
     line-height: 40px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
