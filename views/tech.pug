@@ -3,8 +3,10 @@ extends layout
 block content
     .techsPost-container
         .techsPost
+            - let numOfPost = 1
             for tech in techs
                 .techs-container
+                    span #{numOfPost++}.  
                     a.techs-title(href='/tech/' + tech.id)= tech.title
         div
             if (admin)
