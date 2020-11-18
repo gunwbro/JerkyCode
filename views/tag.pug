@@ -3,5 +3,5 @@ extends layout
 block content
   .tag-container
     for tag in tags
-      - let fontSize = numPost[tag.id] * 20;
+      - let fontSize = 20 + numPost[tag.id] * 5;
       a#tag(href='/tag/' + tag.id, style={ 'font-size': fontSize+'px'})= '#' + tag.title + '(' + numPost[tag.id] + ') '
