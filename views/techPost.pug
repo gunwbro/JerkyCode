@@ -9,6 +9,6 @@ block content
         .tech-tags
           if (tags)
             for tag in tags
-              span.tech-tag= '#' + tag.title + ' '
+              a.tech-tag(href='/tag/' + tag.id)= '#' + tag.title + ' '
   script.
     hljs.initHighlightingOnLoad();
