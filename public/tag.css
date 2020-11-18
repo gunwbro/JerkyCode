@@ -1,0 +1,10 @@
+.tag-container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tag {
+  font-size: 30px;
+  font-weight: bold;
+}

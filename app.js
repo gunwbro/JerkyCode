@@ -11,6 +11,7 @@ const pageRouter = require('./routes/page');
 const authRouter = require("./routes/auth");
 const projectRouter = require('./routes/project');
 const techRouter = require("./routes/tech");
+const tagRouter = require("./routes/tag");
 const { sequelize } = require('./models');
 const passportConfig = require("./passport");
 
@@ -48,6 +49,7 @@ app.use('/', pageRouter);
 app.use('/project', projectRouter);
 app.use("/auth", authRouter);
 app.use("/tech", techRouter);
+app.use("/tag", tagRouter);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');

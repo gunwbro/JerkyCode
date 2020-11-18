@@ -17,11 +17,4 @@ router.get("/profile", (req, res, next) => {
   });
 });
 
-router.get("/tag", (req, res, next) => {
-  res.render("tag", {
-    title: "Jerky Code",
-    menuName: "Tag",
-    admin: req.user,
-  });
-});
 module.exports = router;

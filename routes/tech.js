@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares"); 
 
-const { Tech } = require("../models");
+const { Tech, Tag } = require("../models");
 
 const router = express.Router();
 let fileURL;
@@ -55,9 +55,16 @@ router.post("/post", isLoggedIn, async (req, res, next) => {
       title: req.body.title,
       content: req.body.content,
       img: fileURL,
-    })
+    });
+    const tags = req.body.tag.match(/#[^\s#]*/g);
+    if (tags) {
+      const result = await Promise.all(tags.map(tag => Tag.findOrCreate({
+        where: { title: tag.slice(1).toLowerCase() },
+      })));
+      await tech.addTags(result.map(r => r[0]));
+    }
     fileURL = null;
-    res.redirect("/project");
+    res.redirect("/tech");
   } catch (error) {
     console.error(error);
     next(error);
@@ -77,10 +84,12 @@ router.post("/post/img", upload.single('upload'), (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const tech = await Tech.findOne({ where: { id: req.params.id } });
+    const tags = await tech.getTags();
     res.render("techPost", {
       title: "Jerky Code",
       menuName: tech.title,
       tech,
+      tags,
       admin: req.user,
     });
   } catch (error) {

@@ -13,7 +13,24 @@
 .techs-container {
   font-size: 20px;
 }
+.tech-tags {
+  margin-top: 50px;
+}
+.tech-tag {
+  font-size: 20px;
+  font-weight: bold;
+}
 .newTech-title {
+  width: 750px;
+  height: 30px;
+  border-style: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.newTech-tag {
   width: 750px;
   height: 30px;
   border-style: none;
@@ -27,6 +44,10 @@
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+}
+#spanTag {
+  font-size: 20px;
+  font-weight: bold;
 }
 #cke_editor1 {
   margin-left: auto;

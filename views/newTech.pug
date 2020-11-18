@@ -7,6 +7,8 @@ block content
   form(action='/tech/post' method="post")
       input.newTech-title(type="text", name="title")
       textarea#editor1(name="content", cols="10", rows="80")
+      span#spanTag Tag : 
+      input.newTech-tag(type="text", name="tag")
       button.btn(type='submit') Submit
       script.
         const config = {

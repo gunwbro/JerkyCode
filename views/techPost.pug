@@ -6,5 +6,9 @@ block content
   .techPost
     .tech-container
         .tech-content!= tech.content
+        .tech-tags
+          if (tags)
+            for tag in tags
+              span.tech-tag= '#' + tag.title + ' '
   script.
     hljs.initHighlightingOnLoad();
