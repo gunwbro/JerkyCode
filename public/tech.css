@@ -4,7 +4,7 @@
   margin-right: auto;
 }
 .tech-date {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #767676;
 }
@@ -42,6 +42,10 @@
   outline: none;
   font-size: 20px;
   line-height: 20px;
+}
+
+.tech-content {
+  font-size: 20px;
 }
 .techPost {
   max-width: 600px;

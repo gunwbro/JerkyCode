@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 body {
     background-color: white;
 }
 .header {
+    font-family: 'Titillium Web', sans-serif;
     background-color: white;
     text-align: center;
     height: 300px;
@@ -53,8 +56,12 @@ a {
     font-weight: bold;
     cursor: pointer;
 }
-
 .menuName {
+    font-family: 'Titillium Web', sans-serif;
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+}
+.menuName {
+    
     padding: 70px 0;
     color: #303030;
     font-size: 30px;
@@ -137,3 +144,6 @@ a {
     text-align: left;
 }
 
+code {
+    font-family: 'Titillium Web', sans-serif;
+}
