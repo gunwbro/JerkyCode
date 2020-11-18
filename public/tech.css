@@ -3,7 +3,11 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.tech-date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #767676;
+}
 .techsPost {
   max-width: 600px;
   margin-left: auto;
