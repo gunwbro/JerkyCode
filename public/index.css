@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Code+Pro&family=Titillium+Web&display=swap');
 body {
     background-color: white;
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
 .header {
     font-family: 'Titillium Web', sans-serif;
     background-color: white;
@@ -145,5 +146,7 @@ a {
 }
 
 code {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    font-weight: 400;
 }
