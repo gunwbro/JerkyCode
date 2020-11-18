@@ -5,12 +5,25 @@ const router = express.Router();
 
 router.get("/", async (req, res, next) => {
   try {
+    let numPost = [];
     const tags = await Tag.findAll();
+    for (let tag of tags) {
+      const posts = await tag.getPosts();
+      numPost[tag.id] = Object.keys(posts).length;
+      console.log(Object.keys(posts).length);
+    }
+    // const result = await tags.map(async tag => {
+    //   const posts = await tag.getPosts();
+    //   numPost[tag.id] = Object.keys(posts).length;
+    //   console.log(Object.keys(posts).length);
+    // });
+    console.log(numPost);
     res.render("tag", {
       title: "Jerky Code",
       menuName: "Tag",
       admin: req.user,
-      tags
+      tags,
+      numPost
     });
   } catch (error) {
     console.error(error);
@@ -20,7 +33,6 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    console.log("?");
     const tag = await Tag.findOne({ where: { id: req.params.id } });
     const techs = await tag.getPosts();
     res.render("tech", {
