@@ -9,14 +9,17 @@
   color: #767676;
 }
 .techsPost {
-  max-width: 600px;
+  display: table;
+  width: 800px;
+  min-height: 0;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  border-collapse: collapse;
 }
-.techs-container {
-  font-size: 20px;
-}
+
+
+
 .tech-tags {
   margin-top: 50px;
 }
@@ -62,4 +65,53 @@
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.techs-title {
+  margin: 2px;
+}
+.techs-title a {
+  color: #337ab7;
+  display: inline;
+}
+.techs-title a:hover {
+  color: #1a4366;
+}
+
+th, td {
+  max-width: 100%;
+  display: table-cell;
+}
+
+tr {
+  display: table-row;
+}
+
+thead tr {
+  border-top: 1px solid #ddd;
+}
+.techs-container {
+  display: table-row;
+  border: 1px solid #ddd;
+  border-left-style: none;
+  border-right-style: none;
+  height: 24px;
+}
+.techs-container:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+.tdate {
+  text-align: center;
+  font-size: 14px;
+  color: #333333;
+  border-right: 4px;
+}
+
+.thDate {
+  text-align: center;
+  width: 150px;
+}
+
+.thTitle {
+  text-align: center;
 }
