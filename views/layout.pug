@@ -32,8 +32,9 @@ html
                     span.menuElem.search Search
             .container
                 .searchBar.none
-                    input.searchText(type="text", name="search", size="24")
-                    input.searchBtn(type="button", value="Search")
+                    form(action="/tech/search", method="get")
+                        input.searchText(type="text", name="search", size="24" required autofocus)
+                        button.searchBtn(type="submit") Search
                 if (menuName)
                     .menuName= menuName
                 block content

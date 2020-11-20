@@ -5,6 +5,10 @@ const fs = require("fs");
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares"); 
 
 const { Tech, Tag } = require("../models");
+const { timeStamp } = require("console");
+
+const sequelize = require("sequelize");
+const Op = sequelize.Op;
 
 const router = express.Router();
 let fileURL;
@@ -80,6 +84,31 @@ router.post("/post/img", upload.single('upload'), (req, res, next) => {
     "url": `/img/${req.file.filename}`
    });
 });
+
+router.get("/search", async (req, res, next) => {
+  const query = req.query.search;
+  if (!query) {
+    return res.redirect('/');
+  }
+  try {
+    const posts = await Tech.findAll({
+      where: {
+        title: {
+          [Op.like]: "%" + query + "%"
+        }
+      }
+    });
+    res.render("tech", {
+      title: "Jerky Code",
+      menuName: "Post",
+      admin: req.user,
+      techs: posts,
+    });
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+})
 
 router.get("/:id", async (req, res, next) => {
   try {
