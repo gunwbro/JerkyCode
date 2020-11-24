@@ -88,7 +88,15 @@ router.post("/post", upload2.none(), async (req, res, next) => {
   }
 });
 
-
+router.delete("/:id", async (req, res, next) => {
+  try {
+    const project = await Project.destroy({ where: { id: req.params.id } });
+    res.json(project)
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+})
 
 router.get("/:id", async (req, res, next) => {
   try {

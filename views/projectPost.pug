@@ -6,10 +6,29 @@ block content
       .project-img
         img.postImg(src=project.img alt='섬네일')
       .project-content 
+        input.project-id(type='hidden' value=project.id)
         #project.project-title= 'Project: ' + project.title
         #project.project-date=  'Date: ' + project.date
         #project.project-skills= 'Skills: ' + project.skills
         #project.project-part= 'Take Part: ' + project.part
         #project.project-description= 'Description: ' + project.description
+      .project-delete
+        if (admin)
+          button.deleteBtn(type="submit") Delete
 
     script.
+      document.querySelector(".deleteBtn").addEventListener('click', function() {
+        const id = document.querySelector(".project-id").value;
+        if (confirm('게시물을 삭제하시겠습니까?')) {
+          const xhr = new XMLHttpRequest();
+          xhr.onload = () => {
+            if (xhr.status === 200) {
+                location.href = '/project';
+            } else {
+                console.error(xhr.responseText);
+            }
+          };
+          xhr.open('DELETE', '/project/' + id);
+          xhr.send();
+        }
+      })

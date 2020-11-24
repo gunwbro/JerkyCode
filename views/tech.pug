@@ -13,7 +13,7 @@ block content
                         td.techs-title
                             a(href='/tech/' + tech.id)!= '&nbsp;&nbsp;-&nbsp;'+tech.title
                         td.tdate!=`${tech.createdAt.getFullYear()}년 ${tech.createdAt.getMonth() + 1}월 ${tech.createdAt.getDate()}일`
-        div
-            if (admin)
-                a.writeProject(href='/tech/post') Post
+    .tech-write
+        if (admin)
+            a.writeProject(href='/tech/post') Post
         

@@ -5,11 +5,30 @@ block content
   script(src="/editor/plugins/codesnippet/lib/highlight/highlight.pack.js")
   .techPost
     .tech-container
+        input.tech-id(type='hidden' value=tech.id)
         .tech-date= `${tech.createdAt.getFullYear()}년 ${tech.createdAt.getMonth() + 1}월 ${tech.createdAt.getDate()}일 `
         .tech-content!= tech.content
         .tech-tags
           if (tags)
             for tag in tags
               a.tech-tag(href='/tag/' + tag.id)= '#' + tag.title + ' '
+    .tech-delete
+      if (admin)
+        button.deleteBtn(type="submit") Delete
   script.
     hljs.initHighlightingOnLoad();
+    document.querySelector(".deleteBtn").addEventListener('click', function() {
+        const id = document.querySelector(".tech-id").value;
+        if (confirm('게시물을 삭제하시겠습니까?')) {
+          const xhr = new XMLHttpRequest();
+          xhr.onload = () => {
+            if (xhr.status === 200) {
+                location.href = '/tech';
+            } else {
+                console.error(xhr.responseText);
+            }
+          };
+          xhr.open('DELETE', '/tech/' + id);
+          xhr.send();
+        }
+      })

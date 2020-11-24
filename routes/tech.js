@@ -110,6 +110,16 @@ router.get("/search", async (req, res, next) => {
   }
 })
 
+router.delete("/:id", async (req, res, next) => {
+  try {
+    const tech = await Tech.destroy({ where: { id: req.params.id } });
+    res.json(tech)
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+})
+
 router.get("/:id", async (req, res, next) => {
   try {
     const tech = await Tech.findOne({ where: { id: req.params.id } });
