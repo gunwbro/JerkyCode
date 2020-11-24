@@ -4,4 +4,5 @@ block content
   .tag-container
     for tag in tags
       - let fontSize = 20 + numPost[tag.id] * 5;
-      a#tag(href='/tag/' + tag.id, style={ 'font-size': fontSize+'px'})!= '#' + tag.title + '(' + numPost[tag.id] + ') &nbsp;'
+      if (numPost[tag.id] > 0)
+        a#tag(href='/tag/' + tag.id, style={ 'font-size': fontSize+'px'})!= '#' + tag.title + '(' + numPost[tag.id] + ') &nbsp;'
