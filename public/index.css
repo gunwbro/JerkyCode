@@ -189,3 +189,7 @@ a {
     margin-right: auto;
 }
 
+.writeProject:hover, .deleteBtn:hover {
+    background-color: black;
+}
+
