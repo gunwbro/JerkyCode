@@ -4,7 +4,8 @@
   "description": "Jerkyb's Portfolio",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "cross-env NODE_ENV=production PORT=80 node app",
+    "dev": "nodemon app"
   },
   "author": "Jerkyb",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "bcrypt": "^5.0.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",

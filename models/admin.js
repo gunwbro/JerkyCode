@@ -12,5 +12,7 @@ module.exports = (sequelize, DataTypes) => (
     }, {
         timestamps: true,
         paranoid: true,
+        charset: 'utf8',                //  데이터베이스 문자열을
+        collate: 'utf8_general_ci',     //  UTF8로 설정
     })
 );

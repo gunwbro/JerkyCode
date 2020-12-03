@@ -21,25 +21,37 @@ passportConfig(passport);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 8001);
 
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === 'production') {
+    app.use(morgan("combined"));
+} else {
+    app.use(morgan('dev'));
+}
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/img', express.static(path.join(__dirname, 'uploads')));
 app.use('/editor', express.static(path.join(__dirname, 'ckeditor')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
-app.use(session({
+
+const sessionOption = {
     resave: false,
     saveUninitialized: false,
     secret: process.env.COOKIE_SECRET,
     cookie: {
         httpOnly: true,
-        secure: false,
+        secure: false,  
     }
-}));
+}
 
+if (process.env.NODE_ENV === 'production') {    // https 적용할 경우(필수 아님)
+    sessionOption.proxy = true;
+    sessionOption.cookie.secure = true;
+}
+
+app.use(session(sessionOption));
 app.use(flash());
 app.use(passport.initialize()); // req 객체에 passport 설정을 심음
 app.use(passport.session());    // req.session 객체에 passport 정보를 저장함
