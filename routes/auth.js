@@ -3,6 +3,7 @@ const passport = require("passport");
 const bcrypt = require("bcrypt");
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares");
 const { Admin } = require("../models");
+const logger = require("../logger");
 
 const router = express.Router();
 
@@ -10,7 +11,7 @@ router.get("/login", isNotLoggedIn, async (req, res, next) => {
   try {
     const admin = await Admin.findOne({ where: { name: process.env.ADMIN_NAME } });   
     if (admin === null) {
-      console.log("관리자 계정이 없으니 새로 생성합니다.");
+      logger.info("No Admin Account");
       const hash = await bcrypt.hash(process.env.ADMIN_PASSWORD, 12);
       await Admin.create({
         name: process.env.ADMIN_NAME,
