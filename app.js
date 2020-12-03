@@ -48,7 +48,7 @@ const sessionOption = {
 
 if (process.env.NODE_ENV === 'production') {    // https 적용할 경우(필수 아님)
     sessionOption.proxy = true;
-    sessionOption.cookie.secure = true;
+    //sessionOption.cookie.secure = true;
 }
 
 app.use(session(sessionOption));
