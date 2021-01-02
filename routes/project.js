@@ -29,6 +29,7 @@ const upload = multer({
 });
 
 router.get("/", async (req, res, next) => {
+  console.log("여기는 통과");
   try {
     const projects = await Project.findAll();
     res.render("project", {
