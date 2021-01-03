@@ -64,6 +64,7 @@ app.use("/auth", authRouter);
 app.use("/tech", techRouter);
 app.use("/tag", tagRouter);
 
+// 404 error
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
@@ -71,6 +72,7 @@ app.use((req, res, next) => {
     next(err);
 });
 
+// error handler
 app.use((err,req,res,next) => {
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
