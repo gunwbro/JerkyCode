@@ -7,11 +7,16 @@ block content
         img.postImg(src=project.img alt='섬네일')
       .project-content 
         input.project-id(type='hidden' value=project.id)
-        #project.project-title= 'Project: ' + project.title
-        #project.project-date=  'Date: ' + project.date
-        #project.project-skills= 'Skills: ' + project.skills
-        #project.project-part= 'Take Part: ' + project.part
-        #project.project-description= 'Description: ' + project.description
+        #project.project-title= 'Project: '
+          span.smalll-letter=project.title
+        #project.project-date=  'Date: '
+          span.smalll-letter=project.date
+        #project.project-skills= 'Skills: '
+          span.smalll-letter=project.skills
+        #project.project-part= 'Take Part: '
+          span.smalll-letter=project.part
+        #project.project-description= 'Description: '
+          span.smalll-letter=project.description
       .project-delete
         if (admin)
           button.deleteBtn(type="submit") Delete

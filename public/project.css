@@ -21,13 +21,13 @@
   width: 300px;
   height: 350px;
   background-color: white;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-  -webkit-transition: color 0.2s,box-shadow 0.2s;
-  transition: color 0.2s,box-shadow 0.2s;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: color 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, box-shadow 0.2s;
 }
 
 .projects-img:hover {
-  box-shadow: 1px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
 }
 .projects-title {
   font-weight: bold;
@@ -65,9 +65,8 @@
   height: 500px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  
 }
 #project {
   font-size: 24px;
@@ -118,4 +117,8 @@
 
 #project-elem {
   padding-bottom: 5px;
+}
+
+.smalll-letter {
+  font-weight: normal;
 }
