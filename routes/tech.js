@@ -30,7 +30,7 @@ router.get("/", async (req, res, next) => {
   try {
     const techs = await Tech.findAll();
     res.render("tech", {
-      title: "Jerky Code",
+      title: "Jerky Code - Post",
       menuName: "Post",
       admin: req.user,
       techs 
@@ -44,7 +44,7 @@ router.get("/", async (req, res, next) => {
 router.get("/post", isLoggedIn, (req, res, next) => {
   fileURL = null;
   res.render("newTech", {
-    title: "Jerky Code",
+    title: "Jerky Code - New Post",
     menuName: "New Post",
     admin: req.user,
   })
@@ -125,7 +125,7 @@ router.get("/:id", async (req, res, next) => {
     const tech = await Tech.findOne({ where: { id: req.params.id } });
     const tags = await tech.getTags();
     res.render("techPost", {
-      title: "Jerky Code",
+      title: tech.title,
       menuName: tech.title,
       tech,
       tags,

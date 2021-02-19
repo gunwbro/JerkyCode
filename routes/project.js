@@ -103,7 +103,7 @@ router.get("/:id", async (req, res, next) => {
   try {
     const project = await Project.findOne({ where: { id: req.params.id } });
     res.render("projectPost", {
-      title: "Jerky Code",
+      title: project.title,
       project,
       admin: req.user,
     })
