@@ -1,202 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Code+Pro&family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Code+Pro&family=Titillium+Web&display=swap");
 body {
-    background-color: white;
-    font-family: 'Noto Sans KR', sans-serif;
-    white-space: normal;
+  background-color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  white-space: normal;
 }
 
 .header {
-    font-family: 'Titillium Web', sans-serif;
-    background-color: white;
-    text-align: center;
-    height: 300px;
-    border-bottom: 1px solid #EEEEEE;
+  font-family: "Titillium Web", sans-serif;
+  background-color: white;
+  text-align: center;
+  height: 300px;
+  border-bottom: 1px solid #eeeeee;
 }
 a {
-    text-decoration: none;
-    color: #303030;
+  text-decoration: none;
+  color: #303030;
 }
 .Hello {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .homeImg {
-    box-shadow: 1px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
 }
-.login, .logout {
-    float: right;
-    cursor: pointer;
+.login,
+.logout {
+  float: right;
+  cursor: pointer;
 }
-
 
 .container {
-    min-height: 850px;
-    text-align: center;
-    background-color: white;
+  min-height: 850px;
+  text-align: center;
+  background-color: white;
 }
 .footer {
-    background-color: white;
-    border-top: 1px solid #EEEEEE;
-    height: 150px;
-    text-align: center;
+  background-color: white;
+  border-top: 1px solid #eeeeee;
+  height: 150px;
+  text-align: center;
 }
 
 .title {
-    padding: 100px 0;
-    color: #303030;
-    font-size: 40px;
-    font-weight: bold;
-
+  padding: 100px 0;
+  color: #303030;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .menu {
-    color: #303030;
+  color: #303030;
 }
 .menuElem {
-    margin-right: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
+  margin-right: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .menuName {
-    font-family: 'Titillium Web', sans-serif;
-    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+  font-family: "Titillium Web", sans-serif;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 .menuName {
-    
-    padding: 70px 0;
-    color: #303030;
-    font-size: 30px;
-    font-weight: bold;
+  padding: 70px 0;
+  color: #303030;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.made, .email{
-    color: #303030;
-    font-weight: bold;
+.made,
+.email {
+  color: #303030;
+  font-weight: bold;
 }
 
 .made {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 .email {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
-.homeBtn, .profile, .project, .tech, .tag, .search {
-    color: #303030;
-    -webkit-transition: color 0.1s;
-    transition: color 0.1s;
+.homeBtn,
+.profile,
+.project,
+.tech,
+.tag,
+.search {
+  color: #303030;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
 }
-.homeBtn:hover, .profile:hover, .project:hover, .tech:hover, 
-.tag:hover, .search:hover {
-    color: #cd0a0a;
+.homeBtn:hover,
+.profile:hover,
+.project:hover,
+.tech:hover,
+.tag:hover,
+.search:hover {
+  color: #cd0a0a;
 }
 
 .searchBar {
-    position: absolute;
-    left: 55%;
-    width: 270px;
-    height: 26px;
-    border: none;
+  position: absolute;
+  left: 55%;
+  width: 270px;
+  height: 26px;
+  border: none;
 }
 .git {
 }
 .none {
-    display: none;
+  display: none;
 }
 .searchText {
-    margin-left: 3px;
-    margin-top: 3px;
-    height: 15px;
-    float: left;
+  margin-left: 3px;
+  margin-top: 3px;
+  height: 15px;
+  float: left;
 }
 
 .searchBtn {
-    background-color:#303030;
-    color: white;
-    border: 1px solid#303030;
-    height: 21px;
-    margin-top: 3px;
+  background-color: #303030;
+  color: white;
+  border: 1px solid#303030;
+  height: 21px;
+  margin-top: 3px;
 }
 
 .writeProject {
-    display: block;
-    width: 100px;
-    height: 30px;
-    margin: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #303030;
-    color: white;
-    line-height: 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-  -webkit-transition: color 0.2s,box-shadow 0.2s;
-  transition: color 0.2s,box-shadow 0.2s;
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #303030;
+  color: white;
+  line-height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: color 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, box-shadow 0.2s;
 }
 
-.techsPost, .projectsPost {
-    min-height: 700px;
+.techsPost,
+.projectsPost {
+  min-height: 700px;
 }
 
 .inform {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 20px;
-    line-height: 40px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 20px;
+  line-height: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 .hljs {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 400;
-    max-width: 1000px;
-    font-size: 14px;
-
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  max-width: 1000px;
+  font-size: 14px;
 }
 #profile-elem {
-    font-size: 24px;
-    font-weight: bold;
-    border-left: 5px solid red;
-    padding-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border-left: 5px solid red;
+  padding-left: 10px;
 }
 #profile {
-    font-weight: 400;
+  font-weight: 400;
 }
 .name {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .profile-container-elem {
-    margin: 20px;
+  margin: 20px;
 }
 
 .deleteBtn {
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #303030;
-    color: white;
-    border-style: none;
-    width: 100px;
-    height: 30px;
-    font-size: 16px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-  -webkit-transition: color 0.2s,box-shadow 0.2s;
-  transition: color 0.2s,box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #303030;
+  color: white;
+  border-style: none;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: color 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, box-shadow 0.2s;
 }
 
-.writeProject:hover, .deleteBtn:hover {
-    background-color: black;
-    box-shadow: 1px 4px 20px rgba(0,0,0,0.2);
+.writeProject:hover,
+.deleteBtn:hover {
+  background-color: black;
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
 }
-
